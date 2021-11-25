@@ -1,65 +1,78 @@
 <mat-tab-group dynamicHeight>
-    <mat-tab label="Short tab">
-      <div class="example-small-box mat-elevation-z4">
-        <div class="card-group">
-            <div class="card">
-              <img
-                src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://mdbootstrap.com/img/new/standard/city/042.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This card has supporting text below as a natural lead-in to additional content.
-                </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This card has even longer content than the first to show
-                  that equal height action.
-                </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
-            </div>
+  <mat-tab label="Long tab">
+    <div id="section-holder" class="container-fluid example-large-box mat-elevation-z4">
+      <!-- <mat-grid-list cols="4" rowHeight="100px">
+            <mat-grid-tile
+                *ngFor="let tile of tiles"
+                [colspan]="tile.cols"
+                [rowspan]="tile.rows"
+                [style.background]="tile.color">
+              {{tile.text}}
+            </mat-grid-tile>
+          </mat-grid-list> -->
+      <div class="row h-50">
+        <div class="col-sm-6 col-lg-8">Patient details</div>
+        <div class="col-6 col-lg-4">.col-6 .col-lg-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Long tab">
+    <div class="example-large-box mat-elevation-z4">Large content</div>
+  </mat-tab>
+</mat-tab-group>
+
+<div class="container-fluid">
+  <h3>Visits</h3>
+  <div class="example-small-box mat-elevation-z4">
+    <div class="">
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Wednesday </h3>
+            <p class="card-text">
+              Back Pain
+            </p>
+            <p>
+              <span class="fas fa-notes-medical"></span>
+            </p>
           </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+          </div>
+        </div>
       </div>
-    </mat-tab>
-    <mat-tab label="Long tab">
-      <div class="example-large-box mat-elevation-z4">
-        Large content
-      </div>
-    </mat-tab>
-  </mat-tab-group>
-  
+    </div>
+  </div>
+</div>
