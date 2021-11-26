@@ -1,4 +1,6 @@
-# MyFirstProject
+# Practice Management Portal
+
+Please visit [Main repository Link](https://github.com/RPG-coder/practice-management-portal) for more details on the project.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
