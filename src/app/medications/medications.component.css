@@ -1,7 +1,4 @@
 /* --- Must included in all section tabs content --- */
 .section-holder{
-  height: 50vh;
-}
-.charting{
-  font-size: 80%
+    height: 50vh;
 }

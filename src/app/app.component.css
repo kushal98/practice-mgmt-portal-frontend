@@ -1,0 +1,23 @@
+/* --- Desktop-First Design --- */
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin:0;
+    padding:0;
+}
+
+#section-tabs a{
+    margin: 1px;
+    text-decoration: none;
+}
+.section-links{
+    font-size: 80%;
+}
+
+
+/* --- Medium --- */
+@media screen and (max-width:1200px) {
+    main{/* Padding required for fixed navbar's side-effect */
+        padding-top: 15vh;
+    }
+}

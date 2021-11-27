@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ChartingComponent } from './charting.component';
 
-describe('ChartingComponent', () => {
-  let component: ChartingComponent;
-  let fixture: ComponentFixture<ChartingComponent>;
+import { PmpNavigationComponent } from './pmp-navigation.component';
+
+describe('PmpNavigationComponent', () => {
+  let component: PmpNavigationComponent;
+  let fixture: ComponentFixture<PmpNavigationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChartingComponent ]
+      declarations: [ PmpNavigationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChartingComponent);
+    fixture = TestBed.createComponent(PmpNavigationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

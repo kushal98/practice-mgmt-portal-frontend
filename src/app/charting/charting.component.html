@@ -1,94 +1,27 @@
-<mat-tab-group dynamicHeight>
-  <mat-tab label="Charting">
-    <div id="section-holder" class="container-fluid example-large-box mat-elevation-z4">
-      <!-- <mat-grid-list cols="4" rowHeight="100px">
-            <mat-grid-tile
-                *ngFor="let tile of tiles"
-                [colspan]="tile.cols"
-                [rowspan]="tile.rows"
-                [style.background]="tile.color">
-              {{tile.text}}
-            </mat-grid-tile>
-          </mat-grid-list> -->
+<div class="charting container-fluid example-large-box mat-elevation-z4 section-holder">
+  <div class="row h-100">
+    <div class="col-sm-6 col-lg-5">
       <div class="row h-50">
-        <div class="col-sm-6 col-lg-8">Patient details</div>
-        <div class="col-6 col-lg-4">.col-6 .col-lg-4</div>
+        <!-- Patient Insurance details -->
+        <div class="col">Patient Insurance details</div>
       </div>
-      <div class="row">
-        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
-        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
-        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      <div class="row h-50">
+        <!-- Medical History -->
+        <div class="col">Medical History</div>
       </div>
     </div>
-  </mat-tab>
 
-  <mat-tab label="Demographics">
-    <div class="example-large-box mat-elevation-z4">Demographics</div>
-  </mat-tab>
-  
-  <mat-tab label="Insurance">
-    <div class="example-large-box mat-elevation-z4">Insurance</div>
-  </mat-tab>
-  <mat-tab label="Documents">
-    <div class="example-large-box mat-elevation-z4">Documents</div>
-  </mat-tab>
-  <mat-tab label="Messages">
-    <div class="example-large-box mat-elevation-z4">Messages</div>
-  </mat-tab>
-  <mat-tab label="Lab">
-    <div class="example-large-box mat-elevation-z4">Lab</div>
-  </mat-tab>
-  <mat-tab label="Medication">
-    <div class="example-large-box mat-elevation-z4">Medication</div>
-  </mat-tab>
-</mat-tab-group>
+    <!-- Patient reports -->
+    <div class="col-6 col-lg-7">
+      <div class="row">
+        <!-- Physical Information -->
+        <div class="col-12 col-lg-4">Physical Information (Skeleton, Height, Weight)</div>
 
-<div class="container-fluid">
-  <h3>Visits</h3>
-  <div class="example-small-box mat-elevation-z4">
-    <div class="">
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Wednesday </h3>
-            <p class="card-text">
-              Back Pain
-            </p>
-            <p>
-              <span class="fas fa-notes-medical"></span>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-          </div>
-        </div>
+        <!-- Patient Reports -->
+        <div class="col-12 col-lg-8">Patient reports (BMI, Blood Pressure , Smoking)</div>
       </div>
     </div>
   </div>
 </div>
+ 
+ 

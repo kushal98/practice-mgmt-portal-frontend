@@ -1,0 +1,15 @@
+/*.visit-schedules{
+
+}*/
+.visit-schedules .visit-schedules-title h2{
+    font-size: 120%;
+    color:lightslategrey;
+    font-weight: 700;
+}
+.visit-schedules .visit-schedules-region{
+    background-color: #686de0;
+    min-height: 40vh;
+}
+.visit-schedules .visit-schedules-region .card-group,.visit-schedules .visit-schedules-region .card{
+    height: 100%;
+}
