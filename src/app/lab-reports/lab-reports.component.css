@@ -1,4 +1,37 @@
 /* --- Must included in all section tabs content --- */
-.section-holder{
-    height: 50vh;
+.section-holder *{
+    font-family: 'Open Sans', sans-serif;
+}.section-holder{
+    min-height: 50vh;
 }
+
+/* ---  For Medication and LabReports --- */
+#labreport-content h4{
+    font-size: 120%;
+}
+
+.section-sidebar .section-title h3{
+    font-size: 120%;
+    padding: 10px;
+    text-indent: -15px;
+}
+.section-sidebar-buttons a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}.section-sidebar-buttons a:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+
+
+
