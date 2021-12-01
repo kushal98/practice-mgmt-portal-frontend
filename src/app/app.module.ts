@@ -18,6 +18,9 @@ import { EditLabworksComponent } from './edit-labworks/edit-labworks.component';
 import { DemographicsComponent } from './demographics/demographics.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProgressnotesComponent } from './progressnotes/progressnotes.component';
+import { NewMedicationsComponent } from './new-medications/new-medications.component';
+import { EditMedicationsComponent } from './edit-medications/edit-medications.component';
+import { ViewMedicationsComponent } from './view-medications/view-medications.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { ProgressnotesComponent } from './progressnotes/progressnotes.component'
     EditLabworksComponent,
     DemographicsComponent,
     MessagesComponent,
-    ProgressnotesComponent,  
+    ProgressnotesComponent,
+    NewMedicationsComponent,
+    EditMedicationsComponent,
+    ViewMedicationsComponent,  
   ],
   imports: [
     BrowserModule,

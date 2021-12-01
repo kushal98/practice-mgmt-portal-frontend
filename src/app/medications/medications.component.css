@@ -6,7 +6,7 @@
 }
 
 /* ---  For Medication and LabReports --- */
-#medication-content h4{
+#medications-content h4{
     font-size: 120%;
 }
 
@@ -25,13 +25,9 @@
     display: inline-block;
     width: 100%;
     text-align: center;
+    font-size: 80%;
 }.section-sidebar-buttons a:hover{
     color: black;
     background-color: white;
     border: 1px solid black;
 }
-
-
-
-
-

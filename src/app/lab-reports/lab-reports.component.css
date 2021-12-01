@@ -25,6 +25,7 @@
     display: inline-block;
     width: 100%;
     text-align: center;
+    font-size: 80%;
 }.section-sidebar-buttons a:hover{
     color: black;
     background-color: white;

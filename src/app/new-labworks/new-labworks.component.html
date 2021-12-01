@@ -4,16 +4,16 @@
         <h4> New Labwork </h4>
         <form id="lab-new-form" class="row lab-form">
             <div class="col-12">
-                <label for="labwork_name">Labwork Name:</label>
-                <input type="text" id="labwork_name" name="labwork_name" />
+                <label for="labwork_name">*Labwork Name:</label>
+                <input type="text" id="labwork_name" name="labwork_name" required/>
             </div>
             <div class="col-12 col-md-6">
-                <label for="labwork_due">Due by:</label>
-                <input type="text" id="labwork_due" name="labwork_due" />
+                <label for="labwork_due">*Due by:</label>
+                <input type="datetime-local" id="labwork_due" name="labwork_due" required/>
             </div>
             <div class="col-12 col-md-6">
-                <label for="labwork_upload">Upload (PDF only):</label>
-                <input type="file" id="labwork_upload" name="labwork_upload" />
+                <label for="labwork_upload">*Upload (PDF only):</label>
+                <input type="file" id="labwork_upload" name="labwork_upload" required/>
             </div>
             <div class="col-12">
                 <label for="labwork_desc">Description:</label>
