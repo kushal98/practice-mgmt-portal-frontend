@@ -1,0 +1,54 @@
+<!-- Create New Medications -->
+<div class="row new-content">
+    <div class="col-12">
+        <h4> New Medications </h4>
+        <form id="medications-new-form" class="row lab-form">
+            <div class="col-12">
+                <label for="medications_name">*Medications Name:</label>
+                <input type="text" id="medications_name" name="medications_name" required/>
+            </div>
+            <div class="col-12">
+                <label for="medications_createdat">*Created at:</label>
+                <input type="datetime-local" id="medications_createdat" name="medications_createdat" required/>
+            </div>
+            <div class="col-12">
+                <p>Routine:</p>
+            </div>
+            <div class="col-12 col-md-3 pl-5 mb-3">
+                <label for="medications_routine_cycle">Repeat Cycle:</label>
+                <select id="medications_routine_cycle" name="medications_routine_cycle">
+                    <option value="0">Daily Once</option>
+                    <option value="1">Weekly Once</option>
+                    <option value="2">Monthly Once</option>
+                    <option value="3" selected>None</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <label for="medications_routine_when">When:</label>
+                <select id="medications_routine_when" name="medications_routine_when">
+                    <option value="0">After</option>
+                    <option value="1">Before</option>
+                    <option value="2">At</option>
+                    <option value="3" selected>None</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <label for="medications_routine_timing">Timing:</label>
+                <select id="medications_routine_timing" name="medications_routine_timing">
+                    <option value="0">Breakfast</option>
+                    <option value="1">Lunch</option>
+                    <option value="2">Dinner</option>
+                    <option value="3" selected>None</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="medications_desc">Description:</label>
+                <textarea id="medications_desc" name="medications_desc"></textarea>
+            </div>
+            <div class="labform-buttons">
+                <button type="submit">Create</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>

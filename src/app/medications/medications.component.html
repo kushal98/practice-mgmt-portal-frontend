@@ -1,7 +1,27 @@
 <div class="container-fluid example-large-box mat-elevation-z4 section-holder">
     <div class="row h-100">
-        <div class="col-sm-6 col-lg-5">
-            Medications
+
+        <!-- Sidebar -->
+        <div class="col-12 col-md-4 col-lg-2 section-sidebar">
+            <div class="row section-title">
+                <div class="col">
+                    <h3>Medications</h3>
+                </div>
+            </div>
+            <div class="row section-sidebar-buttons">
+                <div class="col-12">
+                    <a href="medications/new">Generate New Medications</a>
+                </div>
+                <div class="col-12">
+                    <a href="medications/view">View Medications</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="medications-content" class="col-12 col-md-8 col-lg-10 section-content-view p-5">
+            
+            <router-outlet></router-outlet>
+            
         </div>
     </div>
 </div>

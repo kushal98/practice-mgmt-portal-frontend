@@ -1,0 +1,28 @@
+<!-- Edit New Labwork (must do this by API Get and Substitute value and Edit API) -->
+<div class="row edit-content">
+    <div class="col-12">
+        <h4> Edit Labwork </h4>
+        <form id="lab-edit-form" class="row lab-form">
+            <div class="col-12">
+                <label for="labwork_edit_name">Labwork Name:</label>
+                <input type="text" id="labwork_edit_name" name="labwork_edit_name" />
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="labwork_edit_due">Due by:</label>
+                <input type="datetime-local" id="labwork_edit_due" name="labwork_edit_due" />
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="labwork_edit_upload">Upload (PDF only):</label>
+                <input type="file" id="labwork_edit_upload" name="labwork_edit_upload" />
+            </div>
+            <div class="col-12">
+                <label for="labwork_edit_desc">Description:</label>
+                <textarea id="labwork_edit_desc" name="labwork_edit_desc"></textarea>
+            </div>
+            <div class="labform-buttons">
+                <button type="submit">Edit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>

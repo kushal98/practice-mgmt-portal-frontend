@@ -1,0 +1,20 @@
+<!-- View all Patinet labworks -->
+<div class="row view-content">
+    <div class="col-12 p-4">
+        <h4> All of Patient's Labwork </h4>
+        <p class="small">Note: If you see the table empty, this means the patient has no lab reports associated with them at current time.</p>
+        <div class="lab-table-region">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr><th>Sno.</th><th>Name</th><th>Description</th><th>Due</th><th>Lab worksheet</th><th>Patient's Upload</th><th>Edit</th><th>Delete</th></tr>
+                </thead>
+                <tbody>
+                    <!-- Content Updated by the Lab Report API -->
+                    <tr><td>1</td><td>Name</td><td>First Row</td><td>00/00/00 00:00:00 UTC</td><td><small><a href="amazons3link/worsheet.pdf" download>Download</a></small></td><td><small><a href="./patientupload.pdf" download>Download</a></small></td><td><small><a href="labs/edit?id=lab_uuid">Edit</a></small></td><td><small><a href="http://localhost:5000/labs/delete?id=lab_uuid">Delete</a></small></td></tr>
+                    <tr><td>2</td><td>Name</td><td>First Row</td><td>00/00/00 00:00:00 UTC</td><td><small><a href="amazons3link/worsheet.pdf" download>Download</a></small></td><td><small><a href="./patientupload.pdf" download>Download</a></small></td><td><small><a href="labs/edit?id=lab_uuid">Edit</a></small></td><td><small><a href="http://localhost:5000/labs/delete?id=lab_uuid">Delete</a></small></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="small">Note: Due dates are only present here for patient's guidance and is not mandatory for patients to follow. But it's a way to assist in patient's progress.</p>
+    </div>
+</div>

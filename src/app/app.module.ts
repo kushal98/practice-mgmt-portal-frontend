@@ -12,6 +12,15 @@ import { VisitSchedulesComponent } from './visit-schedules/visit-schedules.compo
 import { PmpFooterComponent } from './pmp-footer/pmp-footer.component';
 import { PmpNavigationComponent } from './pmp-navigation/pmp-navigation.component';
 import { MedicationsComponent } from './medications/medications.component';
+import { ViewLabworksComponent } from './view-labworks/view-labworks.component';
+import { NewLabworksComponent } from './new-labworks/new-labworks.component';
+import { EditLabworksComponent } from './edit-labworks/edit-labworks.component';
+import { DemographicsComponent } from './demographics/demographics.component';
+import { MessagesComponent } from './messages/messages.component';
+import { ProgressnotesComponent } from './progressnotes/progressnotes.component';
+import { NewMedicationsComponent } from './new-medications/new-medications.component';
+import { EditMedicationsComponent } from './edit-medications/edit-medications.component';
+import { ViewMedicationsComponent } from './view-medications/view-medications.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +30,16 @@ import { MedicationsComponent } from './medications/medications.component';
     VisitSchedulesComponent,
     PmpFooterComponent,
     PmpNavigationComponent,
-    MedicationsComponent,  
+    MedicationsComponent,
+    ViewLabworksComponent,
+    NewLabworksComponent,
+    EditLabworksComponent,
+    DemographicsComponent,
+    MessagesComponent,
+    ProgressnotesComponent,
+    NewMedicationsComponent,
+    EditMedicationsComponent,
+    ViewMedicationsComponent,  
   ],
   imports: [
     BrowserModule,
