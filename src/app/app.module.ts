@@ -21,6 +21,10 @@ import { ProgressnotesComponent } from './progressnotes/progressnotes.component'
 import { NewMedicationsComponent } from './new-medications/new-medications.component';
 import { EditMedicationsComponent } from './edit-medications/edit-medications.component';
 import { ViewMedicationsComponent } from './view-medications/view-medications.component';
+import { NotesPointClickComponent } from './notes-point-click/notes-point-click.component';
+import { NotesFreeTextComponent } from './notes-free-text/notes-free-text.component';
+import { NotesVoiceoverComponent } from './notes-voiceover/notes-voiceover.component';
+import { ViewNotesComponent } from './view-notes/view-notes.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { ViewMedicationsComponent } from './view-medications/view-medications.co
     ProgressnotesComponent,
     NewMedicationsComponent,
     EditMedicationsComponent,
-    ViewMedicationsComponent,  
+    ViewMedicationsComponent,
+    NotesPointClickComponent,
+    NotesFreeTextComponent,
+    NotesVoiceoverComponent,
+    ViewNotesComponent,  
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+<!-- Create New Labwork -->
+<div class="row new-content">
+    <div class="col-12">
+        <h4> Voiceover </h4>
+        <form id="voiceover-form" class="row lab-form">
+            <div class="col-12 p-3"><small><strong>Note: Make sure your browser provides the microphone access for recording. Open Settings > Permission > then Allow Microphone access</strong></small></div>
+            <div class="col-12">
+                <label for="voiceover_name">*Note Name:</label>
+                <input type="text" id="voiceover_name" name="voiceover_name" required/>
+            </div>
+            <div class="col-12">
+                <label for="voiceover_notes">*Voiceover Recording:</label>
+                <div style="width:0;height:0;visibility: hidden;overflow:hidden" > <input type="text" name="voiceover_notes" id="voiceover_notes" disabled/> </div>
+                <div class="labform-buttons">
+                    <button type="button" id="vo-start-btn">Start Recording</button>
+                    <button type="button" id="vo-stop-btn">Stop Recording</button>
+                    <button type="button" id="vo-play-btn">Play</button>
+                    <button type="button" id="vo-pause-btn">Pause</button>
+                    <small><p style="display: inline-block;text-indent:5px" id="vo-info-text">Press the start button to start recording.</p></small>
+                </div>
+
+
+                <!-- Not Working -->
+                <div class="vo-recording-show">
+                    <!-- Add audio controls in the browser -->
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="voiceover_desc">Description (Any Comment, P.S etc...):</label>
+                <textarea id="voiceover_desc" name="voiceover_desc"></textarea>
+            </div>
+
+            <div class="col-12">
+                <label for="voiceover_transcript">Transcript</label>
+                <p id="voiceover_transcript">
+                    Your Transcript
+                </p>
+            </div>
+
+            <div class="labform-buttons">
+                <button type="submit">Create</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>

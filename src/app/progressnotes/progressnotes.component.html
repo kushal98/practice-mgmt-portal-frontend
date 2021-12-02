@@ -1,3 +1,44 @@
+<div class="container-fluid example-large-box mat-elevation-z4 section-holder">
+    <div class="row h-100">
+
+        <!-- Sidebar -->
+        <div class="col-12 col-md-4 col-lg-2 section-sidebar">
+            <div class="row section-title">
+                <div class="col">
+                    <h3>Progress Notes</h3>
+                </div>
+            </div>
+            <div class="row section-sidebar-buttons">
+                <div class="col-12">
+                    <a href="progressnotes/view">View Notes</a>
+                </div>
+                <div class="col-12">
+                    <h4>Generate New Notes</h4>
+                    <p>(Pick one from below ...)</p>
+                    <div class="col-12" style="text-indent: 5px;">
+                        <div class="col-12">
+                            <a href="progressnotes/new/pointclick">Point & Click</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="progressnotes/new/freetext">Free Text</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="progressnotes/new/voiceover">Voice over</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="medications-content" class="col-12 col-md-8 col-lg-10 section-content-view p-5">
+            
+            <router-outlet></router-outlet>
+            
+        </div>
+    </div>
+</div>
+
 <p style="padding: 30px 50px;">
     Documentation or Progress Notes <br/>
     <br/>
