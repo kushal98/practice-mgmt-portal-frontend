@@ -1,9 +1,28 @@
-<div class="charting container-fluid example-large-box mat-elevation-z4 section-holder">
+<div class="
+    charting
+    container-fluid
+    example-large-box
+    mat-elevation-z4
+    section-holder
+  ">
   <div class="row h-100">
     <div class="col-sm-6 col-lg-5">
-      <div class="row h-50">
+      <div class="row h-50" style="font-weight: bold;">
         <!-- Patient Insurance details -->
-        <div class="col">Patient Insurance details</div>
+        <div class="col">
+          Patient Insurance details :
+          <br /><br />
+          <div class=" col row">
+            <p>Primary Insurance:</p> &nbsp; &nbsp;
+            <p>Visit Copay:</p>
+          </div>
+          <div class=" col row">
+            <p>Secondary Insurance:</p> &nbsp; &nbsp;
+            <p>Visit Copay:</p>
+          </div>
+          <br />
+          <p>Next Appointment: </p>
+        </div>
       </div>
       <div class="row h-50">
         <!-- Medical History -->
@@ -15,13 +34,22 @@
     <div class="col-6 col-lg-7">
       <div class="row">
         <!-- Physical Information -->
-        <div class="col-12 col-lg-4">Physical Information (Skeleton, Height, Weight)</div>
+        <div class="col-12 col-lg-4" style="font-weight: bold;">
+          Physical Information (Skeleton, Height, Weight)
+        </div>
 
         <!-- Patient Reports -->
-        <div class="col-12 col-lg-8">Patient reports (BMI, Blood Pressure , Smoking)</div>
+        <div class="col-12 col-lg-8" style="font-weight: bold;">
+          Patient reports (BMI, Blood Pressure , Smoking)
+          <br />
+          <mat-grid-list cols="4" rowHeight="50px">
+            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+              {{tile.text}}
+            </mat-grid-tile>
+          </mat-grid-list>
+
+        </div>
       </div>
     </div>
   </div>
 </div>
- 
- 
