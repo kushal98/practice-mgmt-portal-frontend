@@ -5,7 +5,7 @@ nav{
     z-index: 999;
 }
 #main-nav{
-    background-color: azure;
+    background-color: #686de0;
     position: fixed;
     -webkit-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.18);
     -moz-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.18);
@@ -20,7 +20,7 @@ h1{
 }#logo-region>a{
     margin: 20px auto;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 #patient-info{
     width: 50%;
