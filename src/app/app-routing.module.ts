@@ -9,9 +9,13 @@ import { MedicationsComponent } from './medications/medications.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NewLabworksComponent } from './new-labworks/new-labworks.component';
 import { NewMedicationsComponent } from './new-medications/new-medications.component';
+import { NotesFreeTextComponent } from './notes-free-text/notes-free-text.component';
+import { NotesPointClickComponent } from './notes-point-click/notes-point-click.component';
+import { NotesVoiceoverComponent } from './notes-voiceover/notes-voiceover.component';
 import { ProgressnotesComponent } from './progressnotes/progressnotes.component';
 import { ViewLabworksComponent } from './view-labworks/view-labworks.component';
 import { ViewMedicationsComponent } from './view-medications/view-medications.component';
+import { ViewNotesComponent } from './view-notes/view-notes.component';
 
 const routes: Routes = [
   { path: '', component: ChartingComponent},
@@ -36,7 +40,21 @@ const routes: Routes = [
   },
   { path: 'demographics', component: DemographicsComponent },
   { path: 'messages', component: MessagesComponent},
-  { path: 'progressnotes', component: ProgressnotesComponent}
+  { 
+    path: 'progressnotes', component: ProgressnotesComponent,
+    children: [
+      {path: '', component: ViewNotesComponent},
+      {path: 'view', component: ViewNotesComponent},
+      {
+        path: 'new',
+        children: [
+          {path: 'pointclick', component: NotesPointClickComponent},
+          {path: 'freetext', component: NotesFreeTextComponent},
+          {path: 'voiceover', component: NotesVoiceoverComponent}
+        ]
+      }
+    ]
+  },
 ];
 
 @NgModule({
