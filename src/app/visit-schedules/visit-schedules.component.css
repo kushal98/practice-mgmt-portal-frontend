@@ -13,3 +13,7 @@
 .visit-schedules .visit-schedules-region .card-group,.visit-schedules .visit-schedules-region .card{
     height: 100%;
 }
+
+.card-body{
+    height: 350px;
+}
