@@ -32,6 +32,36 @@ h1{
     display: none;
 }
 
+.nav-links{
+    list-style: none;
+    float:right
+}
+.nav-links::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.nav-links li{
+    display: inline-block;
+    font-size: 150%;
+    margin-left: 10px;
+}
+.nav-links button{
+    outline: none;
+    border:none;
+    background: none;
+    color: white;
+}
+.nav-links button:hover{
+    cursor: pointer;
+}
+#nav-dropdown-button{
+    font-size: 90%;
+}
+#nav-dropdown-button:focus{
+    outline: none;
+}
+
 /* --- Medium --- */
 @media screen and (max-width:769px) {
     nav{min-height: unset;} 
@@ -39,6 +69,16 @@ h1{
     h1{font-size: 100%;}
     #patient-info{width: 100%;}
     #nav-toggle{
+        display: flex;
+    }
+    .nav-links{
+        float:none;
+        text-align:center;
+    }
+    #patient-info-region, #account-ref-holder{
+        display:none;
+    }
+    #patient-info-region.show, #account-ref-holder.show{
         display: flex;
     }
 }

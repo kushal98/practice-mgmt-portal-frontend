@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie';
 
-export interface TabItem {
-  label: string;
-  route: string;
-  index: Number;
-}
 
 @Component({
   selector: 'app-root',
@@ -15,43 +11,47 @@ export interface TabItem {
 
 export class AppComponent {
   title = 'practice-management-portal';
-  activeLinkIndex:Number;
-  tabs:TabItem[];
+  
 
-  constructor(public router: Router) {
-    this.tabs=this.tabs=[
-      {
-        label: 'Chartings',
-        route: 'chartings',
-        index: 1
-      },
-      {
-        label: 'Demographics',
-        route: 'demographics',
-        index: 2
-      },
-      {
-        label: 'Messages',
-        route: 'messages',
-        index: 3
-      },
-      {
-        label: 'Documents',
-        route: 'progressnotes',
-        index: 4
-      },
-      {
-        label: 'Labs',
-        route: 'labs',
-        index: 5
-      },
-      {
-        label: 'Medications',
-        route: 'medications',
-        index: 6
-      },
-    ];
-    this.activeLinkIndex = 0;
+  constructor(public router: Router, public route:ActivatedRoute, private cookieService: CookieService) {
+
+    this.route.queryParamMap.subscribe(params =>{
+      /* --- If the user is a doctor --- */
+      if (params.get('doctor-id') /*&&  Other Session details*/) {
+
+        
+        // Rahul's Note: TODO
+        this.cookieService.put('employee-id', this.route.snapshot.queryParams['doctor-id']);
+        this.cookieService.put('employee-type', this.route.snapshot.queryParams['doctor']);
+        // Validate Session details (of this id from Patient Kiosk Database) and proceed to ...
+
+        window.location.href = "/doctor";
+
+      }
+      /* --- If the user is a nurse --- */
+      else if(params.get('nurse-id') /*&&  Other Session details*/){
+
+        // Rahul's Note: TODO
+        this.cookieService.put('employee-id', this.route.snapshot.queryParams['nurse-id']);
+        this.cookieService.put('employee-type', this.route.snapshot.queryParams['nurse']);
+        // Validate Session details (of this id from Patient Kiosk Database) and proceed to ...
+
+        window.location.href = "/nurse";
+      }
+      /* --- If the user is a practice manager --- */
+      else if(params.get('practice-manager-id') /*&&  Other Session details*/){
+
+        // Rahul's Note: TODO
+        this.cookieService.put('employee-id', this.route.snapshot.queryParams['practice-manager-id']);
+        this.cookieService.put('employee-type', this.route.snapshot.queryParams['practice manager']);
+        // Validate Session details and proceed to ...
+
+        window.location.href = "/practice-manager";
+      }
+      
+      
+    });
+    
   }
 }
 

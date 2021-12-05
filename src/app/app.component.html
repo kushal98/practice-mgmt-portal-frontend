@@ -1,20 +1,9 @@
 <app-pmp-navigation></app-pmp-navigation>
 
 <main role="app">
-  <!-- Practice Management Portal: Sections-->
-  <div id="section-tabs" mat-tab-nav-bar class="container-fluid p-0">
-    <a mat-tab-link 
-      class="example-large-box mat-elevation-z4 text-dark"
-      *ngFor="let tabItem of tabs;"
-      [routerLink]="tabItem.route">
-      <span [ngClass]="(tabItem.route=== router.url)?'active section-links':'section-links'">{{tabItem.label}}</span>
-    </a>  
-  </div>
-
   <!-- Angular routes handle all work related to section display -->
-  <router-outlet></router-outlet>  
-
+  <router-outlet></router-outlet>
 </main>
 
-<app-visit-schedules></app-visit-schedules>
+
 <app-pmp-footer></app-pmp-footer>

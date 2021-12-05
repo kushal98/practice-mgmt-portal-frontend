@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'app-pmp-navigation',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PmpNavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    
   }
+
+
+  /* API Todo:
+    -  
+   */
 
 }

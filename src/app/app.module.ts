@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieModule } from 'ngx-cookie';
 
 import { AppComponent } from './app.component';
 import { ChartingComponent } from './charting/charting.component';
@@ -28,29 +29,23 @@ import { NotesVoiceoverComponent } from './notes-voiceover/notes-voiceover.compo
 import { ViewNotesComponent } from './view-notes/view-notes.component';
 import { MedicationCrudServiceRuby } from './shared/medication_crud.service';
 import { LabReportCrudServiceRuby } from './shared/lab_crud.service';
+import { DoctorsPageComponent } from './doctors-page/doctors-page.component';
+import { NursesPageComponent } from './nurses-page/nurses-page.component';
+import { PracticeManagersPageComponent } from './practice-managers-page/practice-managers-page.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { CoverPageComponent } from './cover-page/cover-page.component';
+import { PatientFinderComponent } from './patient-finder/patient-finder.component';
+import { DoctorInfoComponentComponent } from './doctor-info-component/doctor-info-component.component';
+import { DoctorFinderComponent } from './doctor-finder/doctor-finder.component';
+import { PatientRecordsComponent } from './patient-records/patient-records.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ChartingComponent,
-    LabReportsComponent,
-    VisitSchedulesComponent,
-    PmpFooterComponent,
-    PmpNavigationComponent,
-    MedicationsComponent,
-    ViewLabworksComponent,
-    NewLabworksComponent,
-    EditLabworksComponent,
-    DemographicsComponent,
-    MessagesComponent,
-    ProgressnotesComponent,
-    NewMedicationsComponent,
-    EditMedicationsComponent,
-    ViewMedicationsComponent,
-    NotesPointClickComponent,
-    NotesFreeTextComponent,
-    NotesVoiceoverComponent,
-    ViewNotesComponent
+    AppComponent, ChartingComponent, LabReportsComponent, VisitSchedulesComponent, PmpFooterComponent, PmpNavigationComponent,
+    MedicationsComponent, ViewLabworksComponent, NewLabworksComponent, EditLabworksComponent, DemographicsComponent,
+    MessagesComponent, ProgressnotesComponent, NewMedicationsComponent, EditMedicationsComponent, ViewMedicationsComponent,
+    NotesPointClickComponent, NotesFreeTextComponent, NotesVoiceoverComponent, ViewNotesComponent, DoctorsPageComponent,
+    NursesPageComponent, PracticeManagersPageComponent, AccountSettingsComponent, CoverPageComponent, PatientFinderComponent, DoctorInfoComponentComponent, DoctorFinderComponent, PatientRecordsComponent
   ],
   imports: [
     BrowserModule,
@@ -58,11 +53,13 @@ import { LabReportCrudServiceRuby } from './shared/lab_crud.service';
     BrowserAnimationsModule,
     MatTabsModule,
     MatGridListModule ,
-    HttpClientModule
+    HttpClientModule,
+    CookieModule.forRoot()
   ],
   exports: [
     PmpFooterComponent, PmpNavigationComponent, VisitSchedulesComponent, LabReportsComponent, 
-    MedicationsComponent
+    MedicationsComponent, DoctorsPageComponent, NursesPageComponent, PracticeManagersPageComponent,
+    AccountSettingsComponent
   ],
   providers: [LabReportCrudServiceRuby, MedicationCrudServiceRuby],
   bootstrap: [AppComponent]

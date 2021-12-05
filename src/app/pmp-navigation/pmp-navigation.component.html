@@ -6,7 +6,7 @@
         <div id="logo-region" class="col-lg-2 col-md-3 col-10 text-center">
             <a class="mt-2 mt-lg-0" href="/"><h1><span style="font-weight: 700;font-size: 150%;">+</span> PracticeEHR</h1></a>
         </div>
-        <div id="nav-toggle" class="col-2 text-center p-4">
+        <div onClick="$('#patient-info-region, #account-ref-holder').toggleClass('show');" id="nav-toggle" class="col-2 text-center p-4">
             <i class="fas fa-bars"></i>
         </div>
         <div id="patient-info-region" class="col-lg-7 col-md-6 col-12">
@@ -20,15 +20,31 @@
         </div>
         <div id="account-ref-holder" class="col-lg-3 col-md-3 col-12">
             <!-- Account Specific Features -->
-            <div class="row">
-            <div class="col">
-                <!-- TODO: Employee Email and Department Here -->
-            </div>
-            </div>
-            <div class="row">
-            <div class="col">
-                <!-- Todo: / Setting / Logout  -->
-            </div>
+            <div class="row pt-2 text-light pb-sm-3" style="padding-top: 35px !important;">
+                <div class="col-12 col-sm-6 col-md-12 col-lg-5 pt-4">
+                    <div class="col-12">
+                        <small>Hello <span id="account-first">User</span>&nbsp;<span id="account-last">P</span>,</small>
+                    </div>
+                    <div class="col-12">
+                        <small><span id="account-email">user@practiceehr.org</span></small>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-12 col-lg-7 pt-4">
+                    <ul class="nav-links">
+                        <li>
+                            <button class="dropdown-toggle"  id="nav-dropdown-button" 
+                            data-toggle="dropdown" aria-haspopup="true" 
+                            aria-expanded="false" ng-click="openSettings()"><i class="fa fa-user"></i>&nbsp;<small style="font-size: 60%;">Account</small></button>
+                            <div class="dropdown-menu" aria-labelledby="nav-dropdown-button">
+                                <a class="dropdown-item" href="/">Home Page</a>
+                                <a class="dropdown-item" href="/patients">Show Patients</a>
+                                <hr/>
+                                <a class="dropdown-item" href="/settings">Settings</a>
+                                <a class="dropdown-item" href="#logout"  ng-click="logOut()"> <i class="fa fa-sign-out"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         </div>
