@@ -1,6 +1,6 @@
 /* --- Must included in all section tabs content --- */
 .section-holder{
-  height: 50vh;
+  min-height: 50vh;
 }
 .charting{
   font-size: 80%

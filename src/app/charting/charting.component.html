@@ -34,8 +34,14 @@
     <div class="col-6 col-lg-7">
       <div class="row">
         <!-- Physical Information -->
-        <div class="col-12 col-lg-4" style="font-weight: bold;">
-          Physical Information (Skeleton, Height, Weight)
+        <div class="col-12 col-lg-4 text-center" style="font-weight: bold;">
+          <picture>
+            <img [src]="imagePath" id="human-body-img" alt="Patient's Physical Details"/>
+          </picture>
+          <div>
+              <div>Height: <span id="patient-height">189</span>cm</div>
+              <div>Weight: <span id="patient-weight">140</span>lb</div>
+          </div>
         </div>
 
         <!-- Patient Reports -->

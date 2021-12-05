@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ChartingComponent } from './charting/charting.component';
@@ -25,6 +26,8 @@ import { NotesPointClickComponent } from './notes-point-click/notes-point-click.
 import { NotesFreeTextComponent } from './notes-free-text/notes-free-text.component';
 import { NotesVoiceoverComponent } from './notes-voiceover/notes-voiceover.component';
 import { ViewNotesComponent } from './view-notes/view-notes.component';
+import { MedicationCrudServiceRuby } from './shared/medication_crud.service';
+import { LabReportCrudServiceRuby } from './shared/lab_crud.service';
 
 @NgModule({
   declarations: [
@@ -47,17 +50,21 @@ import { ViewNotesComponent } from './view-notes/view-notes.component';
     NotesPointClickComponent,
     NotesFreeTextComponent,
     NotesVoiceoverComponent,
-    ViewNotesComponent,  
+    ViewNotesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatGridListModule 
+    MatGridListModule ,
+    HttpClientModule
   ],
-  exports: [PmpFooterComponent, PmpNavigationComponent, VisitSchedulesComponent, LabReportsComponent, MedicationsComponent],
-  providers: [],
+  exports: [
+    PmpFooterComponent, PmpNavigationComponent, VisitSchedulesComponent, LabReportsComponent, 
+    MedicationsComponent
+  ],
+  providers: [LabReportCrudServiceRuby, MedicationCrudServiceRuby],
   bootstrap: [AppComponent]
 })
 
