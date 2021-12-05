@@ -19,8 +19,8 @@ export class ChartingComponent implements OnInit {
   ngOnInit(): void {
   }
   tiles: Tile[] = [
-    {text: 'Weigth', cols: 2, rows: 1, color: '#dee2e6'},
-    {text: 'BMI', cols: 2, rows: 1, color: '#dee2e6'},
+    {text: 'Weigth', cols: 2, rows: 2, color: '#dee2e6'},
+    {text: 'BMI', cols: 2, rows: 2, color: '#dee2e6'},
     {text: 'Blood Pressure', cols: 4, rows: 2, color: '#dee2e6'},
     {text: 'Smoking', cols: 4, rows: 2, color: '#dee2e6'},
   ];
