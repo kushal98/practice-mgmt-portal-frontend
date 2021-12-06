@@ -13,7 +13,9 @@ import { LabReportsComponent } from './lab-reports/lab-reports.component';
 import { MedicationsComponent } from './medications/medications.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NewLabworksComponent } from './new-labworks/new-labworks.component';
+import { PatientInfoComponent } from './patient-info/patient-info.component';
 import { NewMedicationsComponent } from './new-medications/new-medications.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { NotesFreeTextComponent } from './notes-free-text/notes-free-text.component';
 import { NotesPointClickComponent } from './notes-point-click/notes-point-click.component';
 import { NotesVoiceoverComponent } from './notes-voiceover/notes-voiceover.component';
@@ -38,32 +40,31 @@ const routes: Routes = [
   {
     path: 'nurse', component: NursesPageComponent,
     children: [
-      {
-        path: '', component: PatientFinderComponent,
+      {path: '', component: CoverPageComponent},
+      {path: '', component: PatientFinderComponent, outlet:'secondary'},
+      { 
+        path: 'patient-records', component: PatientRecordsComponent,
         children: [
+          { path: '', component: PatientInfoComponent, outlet:'navigation'},
+          { path: '', component: ChartingComponent},
+          { path: 'chartings', component: ChartingComponent},
+          { path: 'demographics', component: DemographicsComponent },
           { 
-            path: 'patient-records', component: ChartingComponent,
+            path: 'labs', component: LabReportsComponent,
             children: [
-              { path: 'chartings', component: ChartingComponent},
-              { path: 'demographics', component: DemographicsComponent },
-              { 
-                path: 'labs', component: LabReportsComponent,
-                children: [
-                  {path: '', component: ViewLabworksComponent},
-                  {path: 'view', component: ViewLabworksComponent},
-                ]
-              },
-              { 
-                path: 'medications', component: MedicationsComponent,
-                children: [
-                  {path: '', component: ViewMedicationsComponent},
-                  {path: 'view', component: ViewMedicationsComponent},
-                ]
-              },
+              {path: '', component: ViewLabworksComponent},
+              {path: 'view', component: ViewLabworksComponent}
+            ]
+          },
+          { 
+            path: 'medications', component: MedicationsComponent,
+            children: [
+              {path: '', component: ViewMedicationsComponent},
+              {path: 'view', component: ViewMedicationsComponent}
             ]
           }
         ]
-      },
+      }
     ]
   },
 
@@ -80,50 +81,49 @@ const routes: Routes = [
   {
     path: 'doctor', component: DoctorsPageComponent,
     children: [
-      {
-        path: '', component: PatientFinderComponent,
+      {path: '', component: CoverPageComponent},
+      {path: '', component: PatientFinderComponent, outlet:'secondary'},
+      { 
+        path: 'patient-records', component: PatientRecordsComponent,
         children: [
+          { path: '', component: PatientInfoComponent, outlet:'navigation'},
+          { path: '', component: ChartingComponent},
+          { path: 'chartings', component: ChartingComponent},
+          { path: 'demographics', component: DemographicsComponent },
           { 
-            path: 'patient-records', component: ChartingComponent,
+            path: 'labs', component: LabReportsComponent,
             children: [
-              { path: 'chartings', component: ChartingComponent},
-              { path: 'demographics', component: DemographicsComponent },
-              { 
-                path: 'labs', component: LabReportsComponent,
-                children: [
-                  {path: '', component: ViewLabworksComponent},
-                  {path: 'view', component: ViewLabworksComponent},
-                  {path: 'new', component: NewLabworksComponent},
-                  {path: 'edit', component: EditLabworksComponent}
-                ]
-              },
-              { 
-                path: 'medications', component: MedicationsComponent,
-                children: [
-                  {path: '', component: ViewMedicationsComponent},
-                  {path: 'view', component: ViewMedicationsComponent},
-                  {path: 'new', component: NewMedicationsComponent},
-                  {path: 'edit', component: EditMedicationsComponent}
-                ]
-              },
-              { path: 'messages', component: MessagesComponent}, 
-              { 
-                path: 'progressnotes', component: ProgressnotesComponent,
-                children: [
-                  {path: '', component: ViewNotesComponent},
-                  {path: 'view', component: ViewNotesComponent},
-                  {
-                    path: 'new',
-                    children: [
-                      {path: 'pointclick', component: NotesPointClickComponent},
-                      {path: 'freetext', component: NotesFreeTextComponent},
-                      {path: 'voiceover', component: NotesVoiceoverComponent}
-                    ]
-                  }
-                ]
-              },
+              {path: '', component: ViewLabworksComponent},
+              {path: 'view', component: ViewLabworksComponent},
+              {path: 'new', component: NewLabworksComponent},
+              {path: 'edit', component: EditLabworksComponent}
             ]
-          }
+          },
+          { 
+            path: 'medications', component: MedicationsComponent,
+            children: [
+              {path: '', component: ViewMedicationsComponent},
+              {path: 'view', component: ViewMedicationsComponent},
+              {path: 'new', component: NewMedicationsComponent},
+              {path: 'edit', component: EditMedicationsComponent}
+            ]
+          },
+          { path: 'messages', component: MessagesComponent}, 
+          { 
+            path: 'progressnotes', component: ProgressnotesComponent,
+            children: [
+              {path: '', component: ViewNotesComponent},
+              {path: 'view', component: ViewNotesComponent},
+              {
+                path: 'new',
+                children: [
+                  {path: 'pointclick', component: NotesPointClickComponent},
+                  {path: 'freetext', component: NotesFreeTextComponent},
+                  {path: 'voiceover', component: NotesVoiceoverComponent}
+                ]
+              }
+            ]
+          },
         ]
       }
     ]
@@ -145,42 +145,36 @@ const routes: Routes = [
   {
     path: 'practice-manager', component: PracticeManagersPageComponent,
     children: [
-      {
-        path: '', component: PatientFinderComponent,
+      {path: '', component: CoverPageComponent},
+      {path: '', component: PatientFinderComponent, outlet:'secondary'},
+      {path: '', component: DoctorFinderComponent, outlet:'terinary'},
+      { 
+        path: 'patient-records', component: PatientRecordsComponent,
         children: [
+          { path: '', component: PatientInfoComponent, outlet:'navigation'},
+          { path: '', component: ChartingComponent},
+          { path: 'chartings', component: ChartingComponent},
+          { path: 'demographics', component: DemographicsComponent },
           { 
-            path: 'patient-records', component: PatientRecordsComponent,
+            path: 'labs', component: LabReportsComponent,
             children: [
-              { path: 'chartings', component: ChartingComponent},
-              { path: 'demographics', component: DemographicsComponent },
-              { 
-                path: 'labs', component: LabReportsComponent,
-                children: [
-                  {path: '', component: ViewLabworksComponent},
-                  {path: 'view', component: ViewLabworksComponent},
-                ]
-              },
-              { 
-                path: 'medications', component: MedicationsComponent,
-                children: [
-                  {path: '', component: ViewMedicationsComponent},
-                  {path: 'view', component: ViewMedicationsComponent},
-                ]
-              },
+              {path: '', component: ViewLabworksComponent},
+              {path: 'view', component: ViewLabworksComponent},
+            ]
+          },
+          { 
+            path: 'medications', component: MedicationsComponent,
+            children: [
+              {path: '', component: ViewMedicationsComponent},
+              {path: 'view', component: ViewMedicationsComponent},
             ]
           }
         ]
-      },{
-        path: '', component: DoctorFinderComponent,
-        children: [
-          { 
-            path: 'doctor', component: DoctorInfoComponentComponent,
-          }
-        ]
       }
-    ],    
+    ]
   },
-  {path: 'settings', component: AccountSettingsComponent}
+  {path: 'settings', component: AccountSettingsComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

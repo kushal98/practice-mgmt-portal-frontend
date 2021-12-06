@@ -1,0 +1,35 @@
+.labform-buttons{
+    width: 100%;
+    padding: 5px 30px;
+}.lab-form button{
+    padding: 10px 30px;
+    margin: 5px;
+    border: 1px solid rgb(114, 114, 243);
+    outline: none;
+    background-color: rgb(114, 114, 243);
+    color: white;
+    font-size: 90%;
+}.lab-form button:hover{
+    cursor: pointer;
+}
+#cover-page{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden
+}
+#main-title{
+    background-color: rgba(0, 0, 0, 0.314);;
+}
+#cover-img{
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    text-align:center;
+    z-index:-2;
+}
+h1{
+    font-size: 230%;
+    font-weight: 400;
+}
+#cover-page-region{
+    min-height: 60vh;
+}

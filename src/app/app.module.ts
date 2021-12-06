@@ -38,6 +38,8 @@ import { PatientFinderComponent } from './patient-finder/patient-finder.componen
 import { DoctorInfoComponentComponent } from './doctor-info-component/doctor-info-component.component';
 import { DoctorFinderComponent } from './doctor-finder/doctor-finder.component';
 import { PatientRecordsComponent } from './patient-records/patient-records.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { PatientInfoComponent } from './patient-info/patient-info.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { PatientRecordsComponent } from './patient-records/patient-records.compo
     MedicationsComponent, ViewLabworksComponent, NewLabworksComponent, EditLabworksComponent, DemographicsComponent,
     MessagesComponent, ProgressnotesComponent, NewMedicationsComponent, EditMedicationsComponent, ViewMedicationsComponent,
     NotesPointClickComponent, NotesFreeTextComponent, NotesVoiceoverComponent, ViewNotesComponent, DoctorsPageComponent,
-    NursesPageComponent, PracticeManagersPageComponent, AccountSettingsComponent, CoverPageComponent, PatientFinderComponent, DoctorInfoComponentComponent, DoctorFinderComponent, PatientRecordsComponent
+    NursesPageComponent, PracticeManagersPageComponent, AccountSettingsComponent, CoverPageComponent, PatientFinderComponent, DoctorInfoComponentComponent, DoctorFinderComponent, PatientRecordsComponent, NotFoundComponent, PatientInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -57,9 +59,11 @@ import { PatientRecordsComponent } from './patient-records/patient-records.compo
     CookieModule.forRoot()
   ],
   exports: [
-    PmpFooterComponent, PmpNavigationComponent, VisitSchedulesComponent, LabReportsComponent, 
-    MedicationsComponent, DoctorsPageComponent, NursesPageComponent, PracticeManagersPageComponent,
-    AccountSettingsComponent
+    ChartingComponent, LabReportsComponent, VisitSchedulesComponent, PmpFooterComponent, PmpNavigationComponent,
+    MedicationsComponent, ViewLabworksComponent, NewLabworksComponent, EditLabworksComponent, DemographicsComponent,
+    MessagesComponent, ProgressnotesComponent, NewMedicationsComponent, EditMedicationsComponent, ViewMedicationsComponent,
+    NotesPointClickComponent, NotesFreeTextComponent, NotesVoiceoverComponent, ViewNotesComponent, DoctorsPageComponent,
+    NursesPageComponent, PracticeManagersPageComponent, AccountSettingsComponent, CoverPageComponent, PatientFinderComponent, DoctorInfoComponentComponent, DoctorFinderComponent, PatientRecordsComponent, NotFoundComponent
   ],
   providers: [LabReportCrudServiceRuby, MedicationCrudServiceRuby],
   bootstrap: [AppComponent]

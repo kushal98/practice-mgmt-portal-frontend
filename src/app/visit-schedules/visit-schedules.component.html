@@ -1,69 +1,172 @@
 <!-- Visit -->
 <div class="visit-schedules container-fluid mb-5">
-
   <!-- Visit Section title-->
-  <div class="visit-schedules-title row"><div class="col pt-3"> <h2 class="mb-1 mt-2">Visits</h2> </div></div>
+  <div class="visit-schedules-title row">
+    <div class="col-12 col-md pt-3">
+      <h2 class="mb-1 mt-2">Visits</h2>
+    </div>
+    <div class="col-12 col-md pt-3 labform-buttons text-center text-md-right">
+      <button type="button"> New Visit </button>
+      <button type="button"> New Encounter </button>
+    </div>
+  </div>
 
-  
-  <!-- Display Visit Schedule here
-      TODO: Akshay Mutha's work
-        - Contact Visit-Scheduling team
-        - GET: request.query(or params) {doctorid,patientid} => response.body {success, data:[visit1={patientid, doctorid, date, day, reason, url},visit2, visit3 ...]}
-        - success is 0(fail)/1(pass) and data contains array of details on patient visits with doctor
-        - request/response are both is JSON
-      TODO: Raj Patel's work
-        - use *ngFor to create cards
-        - integrate API for getting card details reference: https://www.tektutorialshub.com/angular/angular-http-get-example-using-httpclient/
-        - Refer to: Bootstrap 4 Carousel / Slider
-        - Transform below into BS4 Carousel / Slider
-  -->
   <div class="visit-schedules-region row example-small-box mat-elevation-z4 p-3">
     <div class="col p-2">
-
-      <!-- Carousal/Slider must show max 3 cards in one slide -->
-      <div class="card-group">
-
-      
-      <!--Card 1-->
-      <div class="card m-1"> <!-- Create a Card Component with this  -->
-        <div class="card-body">
-          <h3 class="card-title">
-            Date here 
-            <small class="card-subtitle">Day here (Wednesday)...</small>
-          </h3>
-          <p class="card-text"><small>Reason of Visit here ...</small></p>
-          <p><span class="fas fa-notes-medical"></span></p>
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel slide" data-ride="carousel">
+        <!--Controls-->
+        <div class="controls-top p-3">
+          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i>&nbsp;Left</a>
+          <a class="btn-floating" href="#multi-item-example" data-slide="next">Right&nbsp;<i class="fas fa-chevron-right"></i></a>
         </div>
-      </div>
 
-      <!--Card 2-->
-      <div class="card m-1"> <!-- Create a Card Component with this  -->
-        <div class="card-body">
-          <h3 class="card-title">
-            Date here 
-            <small class="card-subtitle">Day here (Wednesday)...</small>
-          </h3>
-          <p class="card-text"><small>Reason of Visit here ...</small></p>
-          <p><span class="fas fa-notes-medical"></span></p>
+        <!--/.Controls-->
+
+        <!--Indicators-->
+        <!-- <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
+        </ol> -->
+       
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--/.First slide-->
+
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="float: left">
+              <div class="card m-1">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Data here
+                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                  </h3>
+                  <p class="card-text">
+                    <small>Reason of Visit here ...</small>
+                  </p>
+                  <p><span class="fas fa-notes-medical"></span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--/.Second slide-->
         </div>
+        <!--/.Slides-->
+        
       </div>
-
-      <!--Card 3-->
-      <div class="card m-1"> <!-- Create a Card Component with this  -->
-        <div class="card-body">
-          <h3 class="card-title">
-            Date here 
-            <small class="card-subtitle">Day here (Wednesday)...</small>
-          </h3>
-          <p class="card-text"><small>Reason of Visit here ...</small></p>
-          <p><span class="fas fa-notes-medical"></span></p>
-        </div>
-      </div>
-
-    </div>    
-
+      <!--/.Carousel Wrapper-->
+    </div>
   </div>
-</div>
-
-
 </div>

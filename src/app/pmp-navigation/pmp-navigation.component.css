@@ -22,11 +22,6 @@ h1{
     text-decoration: none;
     color: white;
 }
-#patient-info{
-    width: 50%;
-}
-
-#patient-info{min-height: 15vh}
 #account-ref-holder{min-height: 5vh}
 #nav-toggle{
     display: none;
@@ -67,7 +62,6 @@ h1{
     nav{min-height: unset;} 
     #logo-region{padding: 10px;}
     h1{font-size: 100%;}
-    #patient-info{width: 100%;}
     #nav-toggle{
         display: flex;
     }

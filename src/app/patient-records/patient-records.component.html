@@ -1,1 +1,10 @@
-<p>patient-records works!</p>
+<div id="section-tabs" mat-tab-nav-bar class="container-fluid p-0">
+    <a mat-tab-link 
+        class="example-large-box mat-elevation-z4 text-dark"
+        *ngFor="let tabItem of tabs;"
+        [routerLink]="tabItem.route">
+        <span [ngClass]="(tabItem.route=== router.url)?'active section-links':'section-links'">{{tabItem.label}}</span>
+    </a>  
+</div>
+
+<router-outlet></router-outlet>

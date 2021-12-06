@@ -1,6 +1,6 @@
 /* --- Must included in all section tabs content --- */
 .section-holder,.section-holder>.row{
-    min-height: 50vh;
+    min-height: 100vh;
 }
 #settings{
     font-size: 80%
