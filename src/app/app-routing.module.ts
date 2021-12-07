@@ -124,10 +124,10 @@ const routes: Routes = [
                 ]
               }
             ]
-          },
-          {path: 'settings', component: AccountSettingsComponent}
+          }
         ]
-      }
+      },
+      {path: 'settings', component: AccountSettingsComponent}
     ]
   },
 
