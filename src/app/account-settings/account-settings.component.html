@@ -1,0 +1,34 @@
+<div class="
+    settings
+    container-fluid
+    example-large-box
+    mat-elevation-z4
+    section-holder
+  ">
+  <div class="row" style="position: relative">
+    <div id="settings-toggle-button" class="col-12 bg-primary">
+        <button onClick="$('#settings-sidebar').toggleClass('show')"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="settings-sidebar" class="col-12 col-md-4 col-lg-2 bg-secondary">
+        <h3>Settings</h3>
+        <ul>
+            <li><a>Add my Appointments</a></li>
+        </ul>
+    </div>
+    <div class="col-12 col-md col-lg p-3 text-center">
+        <div>
+            <img height="100px" width="auto" src="/assets/img/user-icon.png"/>
+        </div>
+        <form>
+            <div class="p-4">
+                <label for="account_description"></label>
+                <textarea class="w-50" type="text" name="account_description" id="account_description"> doctor.description </textarea>
+            </div>
+            <div class="labform-buttons">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

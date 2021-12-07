@@ -1,10 +1,24 @@
-/*.visit-schedules{
-
-}*/
-.visit-schedules .visit-schedules-title h2{
-    font-size: 120%;
-    color:lightslategrey;
-    font-weight: 700;
+.labform-buttons{
+    width: 100%;
+    padding: 5px 30px;
+}.labform-buttons > button{
+    padding: 8px 30px;
+    margin: 5px;
+    border: 1px solid rgb(114, 114, 243);
+    outline: none;
+    background-color: rgb(114, 114, 243);
+    color: white;
+    font-size: 90%;
+}.labform-buttons > button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(114, 114, 243)
+}
+.visit-schedules .visit-schedules-title h2{    
+    margin-left: 20px;
+    font-size: 170%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 .visit-schedules .visit-schedules-region{
     background-color: #686de0;
@@ -12,8 +26,12 @@
 }
 .visit-schedules .visit-schedules-region .card-group,.visit-schedules .visit-schedules-region .card{
     height: 100%;
+    color: black;
 }
-
+.btn-floating{
+    color: white;
+    margin-left: 10px;
+}
 .card-body{
-    height: 350px;
+    height: 100%;
 }

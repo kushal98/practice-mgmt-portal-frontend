@@ -1,0 +1,42 @@
+#doctor-finder{
+    min-height: 30vh;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2%;
+}
+span{padding: 10px;}
+#scroll-div{
+    overflow: scroll;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+}
+/* width */
+#scroll-div::-webkit-scrollbar {
+    width: 20px;
+    background-color: #CFD8DC;
+}
+  
+/* Track */
+#scroll-div::-webkit-scrollbar-track {
+    box-shadow: none; 
+    border-radius: 10px;
+}
+
+/* Handle */
+#scroll-div::-webkit-scrollbar-thumb {
+    content: "Scroll left to see more";
+    background: #90A4AE; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+#scroll-div::-webkit-scrollbar-thumb:hover {
+    background: #90A4AE; 
+}
+
+h2{
+    margin-left: 20px;
+    font-size: 170%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}

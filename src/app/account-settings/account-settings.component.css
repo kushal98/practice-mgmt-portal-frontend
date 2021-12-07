@@ -1,0 +1,61 @@
+/* --- Must included in all section tabs content --- */
+.section-holder,.section-holder>.row{
+    min-height: 100vh;
+}
+#settings{
+    font-size: 80%
+}
+
+#settings-toggle-button{
+    float: right
+}
+.labform-buttons{
+    width: 100%;
+    padding: 5px 30px;
+}.labform-buttons > button{
+    padding: 10px 30px;
+    margin: 5px;
+    border: 1px solid rgb(114, 114, 243);
+    outline: none;
+    background-color: rgb(114, 114, 243);
+    color: white;
+    font-size: 90%;
+}
+
+.labform-buttons > button[type=reset]{
+    padding: 10px 30px;
+    margin: 5px;
+    border: 1px solid rgb(114, 114, 243);
+    outline: none;
+    background-color: white;
+    color: rgb(114, 114, 243);
+    font-size: 90%;
+}
+#settings-toggle-button{
+    display:none
+}
+#settings-toggle-button button{
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 2px 5px;
+    background: none;
+    outline: none;
+    color: white
+}
+
+
+/* --- Medium --- */
+@media screen and (max-width:769px) {
+    #settings-sidebar{
+        display:none;
+        position: absolute;
+        top:10%;
+        height: 90%;
+        z-index: 1;
+    }
+    #settings-sidebar.show{display:flex;} 
+    #settings-toggle-button{
+        padding: 10px;
+        display:inline-block;
+    }   
+}

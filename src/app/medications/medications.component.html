@@ -9,11 +9,11 @@
                 </div>
             </div>
             <div class="row section-sidebar-buttons">
-                <div class="col-12">
-                    <a href="medications/new">Generate New Medications</a>
+                <div *ngIf="this.userAccess===1;" class="col-12">
+                    <a href="{{this.medRootRoute}}/new">Generate New Medications</a>
                 </div>
                 <div class="col-12">
-                    <a href="medications/view">View Medications</a>
+                    <a href="{{this.medRootRoute}}/view">View Medications</a>
                 </div>
             </div>
         </div>

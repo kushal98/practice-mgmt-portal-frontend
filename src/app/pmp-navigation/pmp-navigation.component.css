@@ -17,28 +17,68 @@ h1{
 }
 #logo-region{
     padding: 40px;
-}#logo-region>a{
+}#logo-region a{
     margin: 20px auto;
     text-decoration: none;
     color: white;
 }
-#patient-info{
-    width: 50%;
-}
+#nav-toggle{display: none;}
 
-#patient-info{min-height: 15vh}
-#account-ref-holder{min-height: 5vh}
-#nav-toggle{
-    display: none;
+.nav-links{
+    list-style: none;
+    float:right
 }
+.nav-links::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.nav-links li{
+    display: inline-block;
+    font-size: 150%;
+    margin-left: 10px;
+}
+.nav-links button{
+    outline: none;
+    border:none;
+    background: none;
+    color: white;
+}.nav-links button:hover{cursor: pointer;}
+#nav-dropdown-button{font-size: 90%;}
+#nav-dropdown-button:focus{outline: none;}
 
 /* --- Medium --- */
 @media screen and (max-width:769px) {
-    nav{min-height: unset;} 
+    nav{min-height: unset;height:auto;} 
     #logo-region{padding: 10px;}
     h1{font-size: 100%;}
-    #patient-info{width: 100%;}
     #nav-toggle{
         display: flex;
+    }
+    .nav-links{
+        float:none;
+        text-align:center;
+    }
+    #patient-info-region, #account-ref-holder{
+        display:none;
+    }
+    #patient-info-region.show, #account-ref-holder.show{
+        display: flex;
+    }
+    #nav-dropdown-button{
+        width: 100%;
+    }
+    #dd-menu{
+        display: block;
+        position: relative;
+        background: none;
+        border: none;
+        width: 100%;
+    }
+    #dd-menu .dropdown-item{
+        display: block;
+        position: relative;
+        width: 100%;
+        color: white;
     }
 }
