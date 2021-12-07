@@ -23,7 +23,7 @@ export class MedicationsComponent implements OnInit {
 
     /* Determining Access Route */
     this.medRootRoute = (this.userAccess===1)?'/doctor/patient-records/medications':(
-      (this.userAccess===2)?'/practice-manager/patient-records/medications':(
+      (this.userAccess===2)?'/manager/patient-records/medications':(
         (this.userAccess===3)?'/nurse/patient-records/medications':"/not-found"
       )
     );

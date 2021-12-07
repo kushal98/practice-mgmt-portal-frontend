@@ -12,7 +12,7 @@ export namespace commonServices{
      */
     public userCheck(pathname:string){
       const doctorCheck = /^\/doctor\/.*|$&/.test(pathname);
-      const managerCheck = /^\/practice-manager\/.*|$&/.test(pathname);
+      const managerCheck = /^\/manager\/.*|$&/.test(pathname);
       const nurseCheck = /^\/nurse\/.*|$&/.test(pathname);
       return (doctorCheck)?1: ( (managerCheck)?2: ( (nurseCheck)?3:4 ) );
     }

@@ -29,17 +29,27 @@
                 </div>
                 <div class="col-12 col-lg-7 pt-4">
                     <ul class="nav-links">
-                        <li>
+                        <li id="pc-links">
                             <button class="dropdown-toggle"  id="nav-dropdown-button"
                             data-toggle="dropdown" aria-haspopup="true" 
                             aria-expanded="false" ng-click="openSettings()"><i class="fa fa-user"></i>&nbsp;<small style="font-size: 60%;">Account</small></button>
                             <div id="dd-menu" class="dropdown-menu" aria-labelledby="nav-dropdown-button">
-                                <a class="dropdown-item" href="{{this.home}}">Home Page</a>
+                                <a class="dropdown-item" href="{{this.home}}"><i class="fa fa-home"></i> Home Page</a>
                                 <hr/>
-                                <a class="dropdown-item" href="/settings">Settings</a>
+                                <a class="dropdown-item" href="{{this.home}}/settings"><i class="fa fa-gear"></i> Settings</a>
                                 <a class="dropdown-item" href="{{this.redirectAddress}}"  (click)="this.logOut()"> <i class="fa fa-sign-out"></i> Logout</a>
                             </div>
                         </li>
+                        <li id="mobile-links" class="p-0 text-left">
+                            <div style="width: 100%;"><i class="fa fa-user"></i>&nbsp;Account<hr/></div>
+                            <div class="p-1">
+                                <a href="{{this.home}}"><i class="fa fa-home"></i> Home Page</a>
+                                <hr/>
+                                <a href="{{this.home}}/settings"><i class="fa fa-gear"></i> Settings</a><br/>
+                                <a href="{{this.redirectAddress}}"  (click)="this.logOut()"> <i class="fa fa-sign-out"></i> Logout</a>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </div>

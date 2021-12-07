@@ -19,7 +19,7 @@ export class NotFoundComponent implements OnInit {
       }else if(this.cookieService.get('employeeType')==='nurse'){
         this.home = "/nurse"
       }else if(this.cookieService.get('employeeType')==='manager'){
-        this.home = "/practice-manager"
+        this.home = "/manager"
       }else{
         this.home = "/";
       }
