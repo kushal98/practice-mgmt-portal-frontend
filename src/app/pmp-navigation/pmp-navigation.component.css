@@ -38,6 +38,10 @@ h1{
     font-size: 150%;
     margin-left: 10px;
 }
+
+#pc-links{display: inline-block}
+#mobile-links{display: none;}
+
 .nav-links button{
     outline: none;
     border:none;
@@ -80,5 +84,14 @@ h1{
         position: relative;
         width: 100%;
         color: white;
+    }
+    #mobile-links{display: inline-block;font-size: 100%;}
+    #pc-links{display: none;}
+    #mobile-links a{
+        font-size: 90%;
+        color: white;
+        text-decoration: none;
+    }#mobile-links a:hover{
+        text-decoration: underline;
     }
 }

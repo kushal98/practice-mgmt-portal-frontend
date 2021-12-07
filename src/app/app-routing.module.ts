@@ -64,7 +64,8 @@ const routes: Routes = [
             ]
           }
         ]
-      }
+      },
+      {path: 'settings', component: AccountSettingsComponent}
     ]
   },
 
@@ -124,6 +125,7 @@ const routes: Routes = [
               }
             ]
           },
+          {path: 'settings', component: AccountSettingsComponent}
         ]
       }
     ]
@@ -143,7 +145,7 @@ const routes: Routes = [
 
   --- */
   {
-    path: 'practice-manager', component: PracticeManagersPageComponent,
+    path: 'manager', component: PracticeManagersPageComponent,
     children: [
       {path: '', component: CoverPageComponent},
       {path: '', component: PatientFinderComponent, outlet:'secondary'},
@@ -170,11 +172,10 @@ const routes: Routes = [
             ]
           }
         ]
-      }
+      },
+      {path: 'settings', component: AccountSettingsComponent}
     ]
   },
-
-  {path: 'settings', component: AccountSettingsComponent},
   {path: '**', component: NotFoundComponent}
 ];
 
