@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "practice-management-portal:build:production",
+              "browserTarget": "practice-management-portal:build:production"
             },
             "development": {
-              "browserTarget": "practice-management-portal:build:development",
+              "browserTarget": "practice-management-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
