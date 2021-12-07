@@ -1,51 +1,25 @@
-<div id="patient-finder" class="container-fluid pt-4">
-    <div class="row">
+<div id="patient-finder" class="container-fluid pt-4 pb-4">
+    <div class="row pt-5 pb-5">
         <div class="col-12">
-            <h2>My Patients</h2>
-            <div id="scroll-div" class="pt-4">
 
-                <!-- TODO: ngFor on this element -->
-                <span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span>
+            <div class="row">
+                <div class="col">
+                    <h2>My Patient</h2>
+                </div>
+            </div>
 
-                <!-- Delete These Spans -->
-                <span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span><span id="patient-patientName1">
-                    <a href="{{this.home}}/patient-records">patientName</a>
-                </span>
+            <div id="scroll-div" class="row pt-4">
 
+                <!-- Iteratively give Patients to the patient-finder page -->
+                <div *ngFor="let doctor of this.patients;let i=index" class="col-3" id="patient-{{i+1}}">
+                    <a href="{{this.home}}/patient-records?patientId={{doctor.doctorId}}">{{i+1}}. &nbsp;{{doctor.name}}</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-3">
+                    <small>* Scroll down to view more patients</small>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<router-outlet></router-outlet>
