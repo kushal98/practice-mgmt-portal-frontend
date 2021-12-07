@@ -24,7 +24,7 @@ export class PatientRecordsComponent implements OnInit {
 
     const userTest = new commonServices.UserAuthentication().userCheck(pathname);
     
-    if(userTest===2 || userTest===3){
+    if(userTest===2 || userTest==3){
       this.tabs = [
         {
           label: 'Chartings',

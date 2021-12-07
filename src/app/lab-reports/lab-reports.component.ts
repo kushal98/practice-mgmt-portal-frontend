@@ -25,7 +25,7 @@ export class LabReportsComponent implements OnInit {
     /* Determining Access Route */
     this.labRootRoute = (this.userAccess===1)?'/doctor/patient-records/labs':(
       (this.userAccess===2)?'/practice-manager/patient-records/labs':(
-        (this.userAccess===3)?'/doctor/patient-records/labs':"/not-found"
+        (this.userAccess===3)?'/nurse/patient-records/labs':"/not-found"
       )
     );
   }

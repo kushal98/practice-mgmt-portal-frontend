@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="row section-sidebar-buttons">
-                <div class="col-12">
+                <div *ngIf="this.userAccess===1;" class="col-12">
                     <a href="{{this.labRootRoute}}/new">Generate New Report</a>
                 </div>
                 <div class="col-12">
