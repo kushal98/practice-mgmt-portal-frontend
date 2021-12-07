@@ -16,7 +16,7 @@
             <router-outlet name="navigation"></router-outlet>
 
         </div>
-        <div id="account-ref-holder" class="col-lg-3 col-md-4 col-12">
+        <div *ngIf="this.isLogged" id="account-ref-holder" class="col-lg-3 col-md-4 col-12">
             <!-- Account Specific Features -->
             <div class="row pt-md-2 text-light pb-sm-3" style="padding-top: 35px !important;">
                 <div class="col-12 col-lg-5 pt-md-4">

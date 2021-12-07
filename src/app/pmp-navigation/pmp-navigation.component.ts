@@ -10,13 +10,14 @@ import { CookieService } from 'ngx-cookie';
 export class PmpNavigationComponent implements OnInit {
   home:string;
   redirectAddress:string;
+  isLogged:string;
   constructor(private route: ActivatedRoute, private cookieService: CookieService) { 
     
     this.redirectAddress = "/logout"; // [CHANGE]: Patient Kiosk Signin signup or Appointment Scheduling Home page
-
+    this.isLogged = this.cookieService.get("isLogged");
 
     // Find Home for the user using cookie
-    if(this.cookieService.get('isLogged')){
+    if(this.isLogged){
       //alert(this.cookieService.get('employeeType'));
       if(this.cookieService.get('employeeType')==='doctor'){
         this.home = "/doctor"
