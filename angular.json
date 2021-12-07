@@ -70,11 +70,9 @@
           "configurations": {
             "production": {
               "browserTarget": "practice-management-portal:build:production",
-              "port": 80
             },
             "development": {
               "browserTarget": "practice-management-portal:build:development",
-              "port": 80
             }
           },
           "defaultConfiguration": "development"
