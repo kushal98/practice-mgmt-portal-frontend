@@ -1,26 +1,27 @@
-<div class="democss">
-    <p style="font-weight: bold;">
-        Patient's Demographics <br />
-        <br />
-        - DB: Patient Kiosk's Database (Patient, Person, Patient Demographics)<br />
-    </p>
 
-    <p>
-        Patient's Email:
-    </p>
-    <p>
-        Contact Info:
-        <li>Contact Info 1:</li>
-        <li>Contact Info 2:</li>
-    </p>
-    <p>
-        Address:
-    </p>
-    <p>
-        Blood Type:
-    </p>
 
-    <p>
-        Medical History:
-    </p>
+<div class="democss container-fluid jumbotron">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h2>Patient's Demographics</h2>
+            <p *ngIf="patient.emergency_contact_email">Patient's Email: {{patient.emergency_contact_email}}</p>
+            <p *ngIf="patient.race">Race: {{patient.race}}</p>
+            <p *ngIf="patient.ethnicity">Ethnicity: {{patient.ethnicity}}</p>
+            <p *ngIf="patient.marital_status">Marital Status: {{patient.marital_status}}</p>
+            <p *ngIf="patient.emergency_contact_address">Address: {{patient.emergency_contact_address}}</p>
+            <p *ngIf="patient.license_no">License No.: {{patient.license_no}}</p>
+            <p *ngIf="patient.contact_number">Contact No.: {{patient.emergency_contact_number}}</p>
+            <p *ngIf="patient.income_group">Income Group.: {{patient.income_group}}</p>
+            <p *ngIf="patient.sex">Contact No.: {{patient.sex}}</p>
+            <p *ngIf="patient.visit_detail">General Visit Details:{{patient.visit_detail}}</p>
+        </div>
+        <div class="col-12 col-md-6" *ngIf="true">
+            <h2>Medical History:</h2>
+            <div *ngFor="let field of blueButtonKeys;">
+                <p *ngIf="blueButtonData[field]">
+                    {{field}}: {{blueButtonData[field]}}
+                </p>
+            </div>
+        </div>
+    </div>
 </div>

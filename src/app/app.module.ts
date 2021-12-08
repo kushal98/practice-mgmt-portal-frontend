@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieModule } from 'ngx-cookie';
 
+
 import { AppComponent } from './app.component';
 import { ChartingComponent } from './charting/charting.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -56,7 +57,7 @@ import { PatientInfoComponent } from './patient-info/patient-info.component';
     MatTabsModule,
     MatGridListModule ,
     HttpClientModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
   ],
   exports: [
     ChartingComponent, LabReportsComponent, VisitSchedulesComponent, PmpFooterComponent, PmpNavigationComponent,

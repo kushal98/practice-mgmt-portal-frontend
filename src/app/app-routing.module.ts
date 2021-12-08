@@ -27,6 +27,7 @@ import { ProgressnotesComponent } from './progressnotes/progressnotes.component'
 import { ViewLabworksComponent } from './view-labworks/view-labworks.component';
 import { ViewMedicationsComponent } from './view-medications/view-medications.component';
 import { ViewNotesComponent } from './view-notes/view-notes.component';
+import { VisitSchedulesComponent } from './visit-schedules/visit-schedules.component';
 
 const routes: Routes = [
   /* --- 
@@ -89,6 +90,7 @@ const routes: Routes = [
         children: [
           { path: '', component: PatientInfoComponent, outlet:'navigation'},
           { path: '', component: ChartingComponent},
+          { path: '', component: VisitSchedulesComponent, outlet:'visiting'},
           { path: 'chartings', component: ChartingComponent},
           { path: 'demographics', component: DemographicsComponent },
           { 
@@ -124,10 +126,10 @@ const routes: Routes = [
                 ]
               }
             ]
-          },
-          {path: 'settings', component: AccountSettingsComponent}
+          }
         ]
-      }
+      },
+      {path: 'settings', component: AccountSettingsComponent}
     ]
   },
 
@@ -155,6 +157,7 @@ const routes: Routes = [
         children: [
           { path: '', component: PatientInfoComponent, outlet:'navigation'},
           { path: '', component: ChartingComponent},
+          { path: '', component: VisitSchedulesComponent, outlet:'visiting'},
           { path: 'chartings', component: ChartingComponent},
           { path: 'demographics', component: DemographicsComponent },
           { 
@@ -173,6 +176,9 @@ const routes: Routes = [
           }
         ]
       },
+      {path: 'doctor-info', children:[
+          {path:'details', component: DoctorInfoComponentComponent}
+      ]},
       {path: 'settings', component: AccountSettingsComponent}
     ]
   },
