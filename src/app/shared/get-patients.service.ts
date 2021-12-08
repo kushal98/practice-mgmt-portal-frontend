@@ -19,10 +19,20 @@ export class GetPatientsService {
     return this.httpClient.get(`${endpoint}/intake/${patientId}/personalDetails`,{});
   }
 
-  readDemographice(patientId:string): Observable<any>{
+  readDemographics(patientId:string): Observable<any>{
     return this.httpClient.get(`${endpoint}/intake/${patientId}/demographicDetails`,{});
   }
 
+  readHealthHistory(patientId:string): Observable<any>{
+    return this.httpClient.get(`${endpoint}/health_histories`,{});
+  }
+
+  readBlueButton(patientId:string): Observable<any>{
+    return this.httpClient.get(`${endpoint}/intake/${patientId}/blueButton`,{});
+    
+  }
+
+  
   readInsurance(patientId:string): Observable<any>{
     return this.httpClient.get(`${endpoint}/intake/${patientId}/insuranceDetails`,{});
   }

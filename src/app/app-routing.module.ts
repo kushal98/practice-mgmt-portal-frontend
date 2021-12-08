@@ -176,6 +176,9 @@ const routes: Routes = [
           }
         ]
       },
+      {path: 'doctor-info', children:[
+          {path:'details', component: DoctorInfoComponentComponent}
+      ]},
       {path: 'settings', component: AccountSettingsComponent}
     ]
   },
