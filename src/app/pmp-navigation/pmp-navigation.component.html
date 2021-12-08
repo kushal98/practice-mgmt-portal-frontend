@@ -13,7 +13,7 @@
         </div>
         <div id="patient-info-region" class="col-lg-7 col-md-5 col-12">
 
-            <router-outlet *ngIf="this.patientStored" name="navigation"></router-outlet>
+            <app-patient-info></app-patient-info>
 
         </div>
         <div *ngIf="this.isLogged" id="account-ref-holder" class="col-lg-3 col-md-4 col-12">

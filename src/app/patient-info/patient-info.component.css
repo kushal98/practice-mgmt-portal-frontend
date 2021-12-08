@@ -1,7 +1,4 @@
 #patient-info{
-    width: 50%;
-}
-#patient-info{min-height: 15vh}
-@media screen and (max-width:769px) {
-    #patient-info{width: 100%;}
+    height: 80%;
+    border-radius: 5px;
 }
