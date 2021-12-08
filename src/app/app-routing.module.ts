@@ -46,7 +46,6 @@ const routes: Routes = [
       { 
         path: 'patient-records', component: PatientRecordsComponent,
         children: [
-          { path: '', component: PatientInfoComponent, outlet:'navigation'},
           { path: '', component: ChartingComponent},
           { path: 'chartings', component: ChartingComponent},
           { path: 'demographics', component: DemographicsComponent },
@@ -88,7 +87,6 @@ const routes: Routes = [
       { 
         path: 'patient-records', component: PatientRecordsComponent,
         children: [
-          { path: '', component: PatientInfoComponent, outlet:'navigation'},
           { path: '', component: ChartingComponent},
           { path: '', component: VisitSchedulesComponent, outlet:'visiting'},
           { path: 'chartings', component: ChartingComponent},
@@ -155,7 +153,6 @@ const routes: Routes = [
       { 
         path: 'patient-records', component: PatientRecordsComponent,
         children: [
-          { path: '', component: PatientInfoComponent, outlet:'navigation'},
           { path: '', component: ChartingComponent},
           { path: '', component: VisitSchedulesComponent, outlet:'visiting'},
           { path: 'chartings', component: ChartingComponent},
