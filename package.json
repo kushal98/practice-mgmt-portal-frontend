@@ -1,9 +1,10 @@
 {
-  "name": "my-first-project",
+  "name": "practice-management-portal",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
+    "start-local": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,8 +21,12 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@types/axios": "^0.14.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "jquery": "^3.6.0",
     "ngx-cookie": "^5.0.2",
+    "nodemon": "^2.0.15",
     "rxjs": "~7.4.0",
     "tslib": "^1.9.3",
     "zone.js": "~0.11.4"

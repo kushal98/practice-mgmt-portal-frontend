@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie';
+import { GetPatientsService } from '../shared/get-patients.service';
 
-
+const endpoint = 'https://patient-kiosk.herokuapp.com/'
 
 @Component({
   selector: 'app-patient-finder',
@@ -10,12 +11,14 @@ import { CookieService } from 'ngx-cookie';
   styleUrls: ['./patient-finder.component.css']
 })
 export class PatientFinderComponent implements OnInit {
-  
-  patientData:any;
   home:string;
+  patients:any;
+  error:Number;
+  errorMessage:string;
 
-  constructor(public router: Router, private cookieService: CookieService) {
-
+  constructor(public router: Router, private cookieService: CookieService, private patientService:GetPatientsService) {
+    this.error=0;
+    this.errorMessage="";
     // Find Home for the user using cookie
     if(this.cookieService.get('isLogged')){
       //alert(this.cookieService.get('employeeType'));
@@ -33,10 +36,30 @@ export class PatientFinderComponent implements OnInit {
     }
 
 
-    this.patientData = {}; // [CHANGE] Call the Patient's API to get all the patients data
+    this.patients = []; // [CHANGE] Call the Patient's API to get all the patients data
     
   }
   ngOnInit(): void {
+    this.readPatients();
+  }
+
+  readPatients(): void {
+    try{
+      this.patientService.readAll().subscribe(
+        response => {
+          this.patients = response.patients;
+        }, 
+        error => {
+          this.error = 1;
+          this.errorMessage = "Response Format not supported. Data got Corrupted. Please Try again later ...";
+        }
+      );
+    }catch(err){
+      this.patients= [];
+      this.error = 1;
+      this.errorMessage = "Server is not able to be connected. Please Try again later ...";
+    }
+    
   }
 
 }

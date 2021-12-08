@@ -47,7 +47,8 @@ export class AppComponent {
 
           window.location.href = "/manager";
         }else {
-          window.location.href="/not-found";
+          if(window.location.pathname!=="/not-found") window.location.href="/not-found";
+          // else execute normally
         }
 
         // TODO: Based on employeeType check their Id is in the respective database (nurses, doctors OR practice_managers).

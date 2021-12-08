@@ -3,12 +3,10 @@
     font-family: 'Open Sans', sans-serif;
     padding: 2%;
 }
-span{padding: 10px;}
 #scroll-div{
-    overflow: scroll;
-    overflow-y: hidden;
-    height: 100%;
-    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 200px;
 }
 /* width */
 #scroll-div::-webkit-scrollbar {

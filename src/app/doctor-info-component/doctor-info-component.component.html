@@ -1,1 +1,18 @@
-<p>doctor-info-component works!</p>
+<div class="container-fluid jumbotron">
+    <div class="row">
+        <div class="col text-center p-5">
+            <img class="pb-2" style="width:100px;height:100px;" src="/assets/img/user-icon.png" alt="User-{{doctor.doctorId}}">
+            <p>Name: {{doctor.name}}</p>
+            <p>Email: {{doctor.email}}</p>
+            <p>Years Of Experience: {{doctor.yearsOfExperience}}</p>
+            <p>Total Patient: {{doctor.totalPatients}}</p>
+        </div>
+        <div class="col p-5">
+            <div class="row p-5">
+                <div class="col p-5">
+                    {{doctor.doctorDescription}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
