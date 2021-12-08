@@ -36,11 +36,11 @@ export class ChartingComponent implements OnInit {
   }
 
   tiles: Tile[] = [
-    {text: 'BMI', cols: 4, rows: 2, color: '#dee2e6'},
+    {text: 'BMI : 26.36', cols: 4, rows: 2, color: '#dee2e6'},
     {text: 'Blood Pressure', cols: 4, rows: 2, color: '#dee2e6'},
-    {text: 'Systolic', cols: 2, rows: 1, color: '#dee2e6'},
-    {text: 'Diastolic', cols: 2, rows: 1, color: '#dee2e6'},
-    {text: 'Smoking', cols: 4, rows: 2, color: '#dee2e6'},
+    {text: 'Systolic: 120mmHg', cols: 2, rows: 1, color: '#dee2e6'},
+    {text: 'Diastolic: 80mmHg', cols: 2, rows: 1, color: '#dee2e6'},
+    {text: 'Smoking Status: None', cols: 4, rows: 2, color: '#dee2e6'},
   ];
 
 
