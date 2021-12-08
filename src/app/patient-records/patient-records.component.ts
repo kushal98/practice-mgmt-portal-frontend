@@ -9,6 +9,8 @@ export interface TabItem {
   index: Number;
 }
 
+declare var $:any;
+
 @Component({
   selector: 'app-patient-records',
   templateUrl: './patient-records.component.html',

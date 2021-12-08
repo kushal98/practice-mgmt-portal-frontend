@@ -8,6 +8,7 @@
     <div class="col-12 col-md pt-3 labform-buttons text-center text-md-right">
       <button type="button"> New Visit </button>
       <button type="button"> New Encounter </button>
+      <button *ngClick="refreshVisits()" type="button"> Refresh </button>
     </div>
   </div>
 
@@ -31,142 +32,71 @@
        
         <!--/.Indicators-->
 
-        <!--Slides-->
         <div class="carousel-inner" role="listbox">
           <!--First slide-->
-          <div class="carousel-item active">
-            <div class="col-md-3" style="float: left">
+          <div *ngFor="let visitSet of this.visits; let i = index;" id="carousel-{{i}}" class="carousel-item">
+            <div *ngFor="let visit of visitSet;" class="col-md-3" style="float: left">
               <div class="card m-1">
-                <div class="card-body">
+                <div class="card-body p-5">
                   <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
+                    {{visit.date}}
+                    <small class="card-subtitle">{{visit.day}}</small>
                   </h3>
                   <p class="card-text">
-                    <small>Reason of Visit here ...</small>
+                    <span class="pr-4 fas fa-notes-medical"></span> <small>{{visit.reason}}</small>
                   </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
           </div>
           <!--/.First slide-->
 
-          <!--Second slide-->
-          <div class="carousel-item">
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card m-1">
-                <div class="card-body">
-                  <h3 class="card-title">
-                    Data here
-                    <small class="card-subtitle">Day here (Wednesday)...</small>
-                  </h3>
-                  <p class="card-text">
-                    <small>Reason of Visit here ...</small>
-                  </p>
-                  <p><span class="fas fa-notes-medical"></span></p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!--/.Second slide-->
+          
         </div>
-        <!--/.Slides-->
+
+
+
         
-      </div>
-      <!--/.Carousel Wrapper-->
     </div>
   </div>
 </div>
+
+<!--
+
+<div *ngFor="let visitSet of visits; let i = index;" >
+  <div *ngFor="let visit of visitSet;" id="div-{{i}}">
+
+    <div *ngIf="i==0" class="carousel-item col-md-3 active" style="float: left">
+      <div class="card m-1">
+        <div class="card-body  p-5">
+          <h3 class="card-title">
+            {{visit.date}}
+            <small class="card-subtitle">{{visit.day}}</small>
+          </h3>
+          <p class="card-text">
+            <span class="fas fa-notes-medical pr-3"></span><small>{{visit.reason}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="i!=0" class="carousel-item col-md-3" style="float: left">
+      <div class="card m-1">
+        <div class="card-body  p-5">
+          <h3 class="card-title">
+            {{visit.date}}
+            <small class="card-subtitle">{{visit.day}}</small>
+          </h3>
+          <p class="card-text">
+            <span class="fas fa-notes-medical pr-3"></span><small>{{visit.reason}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  
+-->
+
+
