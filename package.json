@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@types/axios": "^0.14.0",
     "express": "^4.17.1",
     "jquery": "^3.6.0",
     "ngx-cookie": "^5.0.2",

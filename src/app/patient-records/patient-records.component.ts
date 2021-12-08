@@ -19,7 +19,7 @@ export class PatientRecordsComponent implements OnInit {
   tabs:TabItem[];
 
 
-  constructor(public router: Router, private cookieService: CookieService) { 
+  constructor(public router: Router, private cookieService: CookieService, public route:ActivatedRoute) { 
     const pathname = window.location.pathname;
 
     const userTest = new commonServices.UserAuthentication().userCheck(pathname);
@@ -85,7 +85,21 @@ export class PatientRecordsComponent implements OnInit {
     }
   }
 
+
   ngOnInit(): void {
+    this.route.queryParamMap.subscribe(params =>{
+
+      // Check if PatientId is in Query string, that is user selected a patient
+      if(params.get('patientId')){
+        this.cookieService.put('patientId', this.route.snapshot.queryParams['patientId']);
+        this.cookieService.put('isPatientStored', 'true');
+      }else if(this.cookieService.get("isPatientStored")=="true") { // User entered url manually without providing a patientId, show Last view patient
+        //do nothing as the page cookie has patientId
+      }else{ //error page
+        window.location.href="/not-found";
+      }
+      
+    });
   }
 
 }
