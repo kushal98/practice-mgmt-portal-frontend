@@ -28,4 +28,19 @@ export class GetDoctorsService {
       }
     });
   }
+
+  readNurse(nurseId:string): Observable<ResponseFormat> {
+    return this.httpClient.get<ResponseFormat>(`${endpoint}/nurse`,{
+      params:{
+        nurseId: nurseId
+      }
+    });
+  }
+  readManager(managerId:string): Observable<ResponseFormat> {
+    return this.httpClient.get<ResponseFormat>(`${endpoint}/manager`,{
+      params:{
+        managerId: managerId
+      }
+    });
+  }
 }

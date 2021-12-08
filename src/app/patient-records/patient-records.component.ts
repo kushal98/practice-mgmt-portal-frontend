@@ -19,14 +19,14 @@ declare var $:any;
 export class PatientRecordsComponent implements OnInit {
 
   tabs:TabItem[];
-
+  userTest:Number;
 
   constructor(public router: Router, private cookieService: CookieService, public route:ActivatedRoute) { 
     const pathname = window.location.pathname;
 
-    const userTest = new commonServices.UserAuthentication().userCheck(pathname);
+    this.userTest = new commonServices.UserAuthentication().userCheck(pathname);
     
-    if(userTest===2 || userTest==3){
+    if(this.userTest===2 || this.userTest==3){
       this.tabs = [
         {
           label: 'Chartings',
@@ -49,7 +49,7 @@ export class PatientRecordsComponent implements OnInit {
           index: 4
         }
       ]
-    }else if(userTest==1){
+    }else if(this.userTest==1){
       this.tabs=[
         {
           label: 'Chartings',
@@ -95,6 +95,9 @@ export class PatientRecordsComponent implements OnInit {
       if(params.get('patientId')){
         this.cookieService.put('patientId', this.route.snapshot.queryParams['patientId']);
         this.cookieService.put('isPatientStored', 'true');
+        window.location.href = '/'+(
+          (this.userTest===1)?'doctor':((this.userTest===2)?'manager':((this.userTest===3)?'nurse':4))
+        )+'/patient-records'
       }else if(this.cookieService.get("isPatientStored")=="true") { // User entered url manually without providing a patientId, show Last view patient
         //do nothing as the page cookie has patientId
       }else{ //error page

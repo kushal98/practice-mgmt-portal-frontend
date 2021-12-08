@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie';
 import { GetPatientsService } from '../shared/get-patients.service';
 
+const endpoint = 'https://patient-kiosk.herokuapp.com/'
 
 @Component({
   selector: 'app-patient-finder',
@@ -39,14 +40,14 @@ export class PatientFinderComponent implements OnInit {
     
   }
   ngOnInit(): void {
-    this.readDoctors();
+    this.readPatients();
   }
 
-  readDoctors(): void {
+  readPatients(): void {
     try{
       this.patientService.readAll().subscribe(
         response => {
-          this.patients = response.data;
+          this.patients = response.patients;
         }, 
         error => {
           this.error = 1;

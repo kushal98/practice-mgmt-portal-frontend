@@ -11,8 +11,8 @@
             <div id="scroll-div" class="row pt-4">
 
                 <!-- Iteratively give Patients to the patient-finder page -->
-                <div *ngFor="let doctor of this.patients;let i=index" class="col-3" id="patient-{{i+1}}">
-                    <a href="{{this.home}}/patient-records?patientId={{doctor.doctorId}}">{{i+1}}. &nbsp;{{doctor.name}}</a>
+                <div *ngFor="let patient of this.patients;let i=index" class="col-3" id="patient-{{i+1}}">
+                    <a href="{{this.home}}/patient-records?patientId={{patient.id}}">{{patient.id}}: &nbsp;{{patient.first_name}} {{patient.first_name}}</a>
                 </div>
             </div>
             <div class="row">

@@ -13,21 +13,24 @@
         </div>
         <div id="patient-info-region" class="col-lg-7 col-md-5 col-12">
 
-            <router-outlet name="navigation"></router-outlet>
+            <router-outlet *ngIf="this.patientStored" name="navigation"></router-outlet>
 
         </div>
         <div *ngIf="this.isLogged" id="account-ref-holder" class="col-lg-3 col-md-4 col-12">
             <!-- Account Specific Features -->
             <div class="row pt-md-2 text-light pb-sm-3" style="padding-top: 35px !important;">
-                <div class="col-12 col-lg-5 pt-md-4">
+                <div class="col-12 col-lg-6 pt-md-4">
                     <div class="col-12">
-                        <small>Hello <span id="account-first">User</span>&nbsp;<span id="account-last">P</span>,</small>
+                        <small *ngIf="this.home=='/doctor'">Hello <span id="account-first">{{user.name}}</span>,</small>
+                        <small *ngIf="this.home=='/nurse'">Hello <span id="account-first">{{user.nurseFirstName}}</span>&nbsp;<span id="account-last">{{user.nurseLastName}}</span>,</small>
+                        <small *ngIf="this.home=='/manager'">Hello <span id="account-first">{{user.managerFirstName}}</span>&nbsp;<span id="account-last">{{user.managerLastName}}</span>,</small>
                     </div>
                     <div class="col-12">
-                        <small><span id="account-email">user@practiceehr.org</span></small>
+                        <small *ngIf="this.home=='/doctor'"><span  id="account-email">{{user.email}}</span></small>
+                        <small *ngIf="this.home!='/doctor'"><span  id="account-email">{{user.contactNo}}</span></small>
                     </div>
                 </div>
-                <div class="col-12 col-lg-7 pt-4">
+                <div class="col-12 col-lg-6 pt-4">
                     <ul class="nav-links">
                         <li id="pc-links">
                             <button class="dropdown-toggle"  id="nav-dropdown-button"
