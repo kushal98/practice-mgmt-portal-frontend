@@ -17,8 +17,8 @@
     margin: 5px;
     border: 1px solid rgb(114, 114, 243);
     outline: none;
-    background-color: rgb(114, 114, 243);
-    color: white;
+    background-color: white;
+    color: rgb(114, 114, 243);
     font-size: 90%;
 }
 
@@ -41,6 +41,25 @@
     background: none;
     outline: none;
     color: white
+}
+
+
+#settings-sidebar .labform-buttons{
+    width: 100%;
+    list-style: none;
+}#settings-sidebar .labform-buttons  button{
+    padding: 20px 30px;
+    margin: 5px;
+    width: 100%;
+    border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 70%;
+}#settings-sidebar .labform-buttons  button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(114, 114, 243)
 }
 
 
